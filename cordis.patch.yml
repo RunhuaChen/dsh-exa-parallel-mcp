@@ -1,0 +1,15 @@
+- insert:
+    - id: exa-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: exa
+        transport: streamable-http
+        url: https://mcp.exa.ai/mcp
+        failOnStartupError: false
+    - id: parallel-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: parallel
+        transport: streamable-http
+        url: https://mcp.parallel.ai/mcp
+        failOnStartupError: false
