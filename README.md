@@ -13,24 +13,22 @@
 
 ## 前提
 
-DSH 运行时版本 `>=0.2.0-rc.1 <0.3.0-0`，并在 Web 界面里使用。
+DSH 运行时版本 `>=0.2.0-rc.1 <0.3.0-0 || >=0.2.2-0 <0.3.0-0`，并在 Web 界面里使用。
 
 ## 安装
 
-克隆仓库：
+从 npm 安装（推荐，不需要访问 GitHub）：
 
 ```bash
-git clone https://github.com/RunhuaChen/dsh-exa-parallel-mcp.git
+dsh plugin --profile web add @chenrunhua/dsh-exa-parallel-mcp
 ```
 
-在 DSH 的会话里让 Agent 把这个本地目录装成 bundle：
+也可以在 DSH 的插件管理器里，把包名 `@chenrunhua/dsh-exa-parallel-mcp` 填进安装框。
 
-> 用 plugin_manager 把 dsh-exa-parallel-mcp 仓库目录装成 bundle，目录是 /你的路径/dsh-exa-parallel-mcp
+仍然可以从仓库安装（需要能访问 GitHub）：
 
-或者直接调用插件管理工具：
-
-```json
-{ "action": "install_bundle", "target": "/你的路径/dsh-exa-parallel-mcp" }
+```bash
+dsh plugin --profile web add github:RunhuaChen/dsh-exa-parallel-mcp
 ```
 
 安装完成后刷新页面；如果刷新后工具没有出现，把 DSH 应用完整重启一次。
@@ -38,7 +36,7 @@ git clone https://github.com/RunhuaChen/dsh-exa-parallel-mcp.git
 ## 卸载
 
 ```json
-{ "action": "remove_bundle", "target": "@RunhuaChen/dsh-exa-parallel-mcp" }
+{ "action": "remove_bundle", "target": "@chenrunhua/dsh-exa-parallel-mcp" }
 ```
 
 ## 工作原理

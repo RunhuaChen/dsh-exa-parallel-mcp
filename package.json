@@ -1,8 +1,8 @@
 {
-  "name": "@RunhuaChen/dsh-exa-parallel-mcp",
-  "version": "1.0.0",
+  "name": "@chenrunhua/dsh-exa-parallel-mcp",
+  "version": "1.0.1",
   "description": "为 DeepSeek Harness 接入 Exa 与 Parallel 两个免密钥 MCP 搜索服务器的 bundle。",
-  "private": true,
+  "license": "MIT",
   "type": "module",
   "repository": {
     "type": "git",
@@ -29,7 +29,10 @@
     }
   },
   "engines": {
-    "dsh": ">=0.2.0-rc.1 <0.3.0-0"
+    "dsh": ">=0.2.0-rc.1 <0.3.0-0 || >=0.2.2-0 <0.3.0-0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [
     "deepseek-harness",

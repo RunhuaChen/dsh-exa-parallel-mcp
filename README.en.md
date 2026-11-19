@@ -13,18 +13,22 @@ Both connections use `streamable-http`, need no API key, and set `failOnStartupE
 
 ## Requirements
 
-DSH runtime `>=0.2.0-rc.1 <0.3.0-0`, used in the Web interface.
+DSH runtime `>=0.2.0-rc.1 <0.3.0-0 || >=0.2.2-0 <0.3.0-0`, used in the Web interface.
 
 ## Install
 
+Install from npm (recommended; does not need GitHub access):
+
 ```bash
-git clone https://github.com/RunhuaChen/dsh-exa-parallel-mcp.git
+dsh plugin --profile web add @chenrunhua/dsh-exa-parallel-mcp
 ```
 
-Ask the agent in a DSH session to install the local directory as a bundle, or call the plugin manager directly:
+You can also paste the package name `@chenrunhua/dsh-exa-parallel-mcp` into the plugin manager's install field.
 
-```json
-{ "action": "install_bundle", "target": "/your/path/dsh-exa-parallel-mcp" }
+Installing from the repository still works where GitHub is reachable:
+
+```bash
+dsh plugin --profile web add github:RunhuaChen/dsh-exa-parallel-mcp
 ```
 
 Reload the page after installing; if the tools do not appear, restart the DSH app once.
@@ -32,7 +36,7 @@ Reload the page after installing; if the tools do not appear, restart the DSH ap
 ## Uninstall
 
 ```json
-{ "action": "remove_bundle", "target": "@RunhuaChen/dsh-exa-parallel-mcp" }
+{ "action": "remove_bundle", "target": "@chenrunhua/dsh-exa-parallel-mcp" }
 ```
 
 ## How it works
